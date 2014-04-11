@@ -1,0 +1,19 @@
+*.pyc
+
+# NPM packages
+node_modules/
+
+# Bower components
+bower_components/
+
+# Intermediate files used by grunt
+static-src-build/
+
+# Sass cache
+.sass-cache/
+
+# Production settings
+mysite/production.py
+
+# static root
+sitestatic/
