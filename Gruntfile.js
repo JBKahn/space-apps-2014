@@ -4,10 +4,10 @@ module.exports = function(grunt) {
         concat: {
             js: {
                 src: [
-                    'bower_components/jquery/dist/jquery.min.js',
+                    'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap/dist/js/bootstrap.min.js',
                     'bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js',
-                    // 'static-src/js/app.js'
+                    'static-src/js/app.js'
                 ],
                 dest: 'static/js/requirements.dist.js'
             },
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                     'bower_components/bootstrap-datepicker/css/datepicker.css',
                     'bower_components/bootstrap/dist/css/bootstrap.min.css',
                     'bower_components/font-awesome/css/font-awesome.min.css',
-                    // 'static-src-build/css/style.css'
+                    'static-src-build/css/style.css'
                 ],
                 dest: 'static/css/style.dist.css'
             }
@@ -67,23 +67,23 @@ module.exports = function(grunt) {
             }
         },
 
-        // sass: {
-        //   dist: {
-        //     files: {
-        //       "static-src-build/css/style.css": 'static-src/sass/style.scss',
-        //     }
-        //   }
-        // },
+        sass: {
+          dist: {
+            files: {
+              "static-src-build/css/style.css": 'static-src/sass/style.scss',
+            }
+          }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
-    // grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['concat', 'copy', 'jade']);
+    grunt.registerTask('default', ['sass', 'concat', 'copy', 'jade']);
     grunt.registerTask('dev', ['default', 'connect', 'watch']);
 
 };

@@ -1,3 +1,13 @@
 | {% load staticfiles %}
+doctype html
+html(lang="en")
+    head
+        title Spacet
+        link(rel="stylesheet", type="text/css", href!='{% static "css/style.dist.css" %}')
+        script(src!='{% static "js/requirements.dist.js" %}' type="text/javascript")
 
-p I'm a site!!!
+        | {% block body %}
+        block body
+            body
+                 canvas(id="clock")
+        | {% endblock %}
