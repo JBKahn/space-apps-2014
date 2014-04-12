@@ -1,4 +1,4 @@
-/*global $, requestAnimationFrame, window*/
+/*global $, requestAnimationFrame, window, document*/
 var $vitals, Vitals, vitals,
     __bind = function (fn, me) {
         "use strict";
@@ -10,17 +10,12 @@ var $vitals, Vitals, vitals,
 Vitals = (function () {
     "use strict";
     Vitals.prototype.context = null;
-
     Vitals.prototype.startAngle1 = null;
     Vitals.prototype.startAngle2 = null;
     Vitals.prototype.startAngle3 = null;
-
     Vitals.prototype.canvasHeight = 0;
-
     Vitals.prototype.canvasWidth = 0;
-
     Vitals.prototype.centerX = 0;
-
     Vitals.prototype.centerY = 0;
 
     function Vitals($context) {
@@ -31,7 +26,7 @@ Vitals = (function () {
         this.canvasWidth = this.$context.width();
         this.centerX = this.canvasWidth / 2;
         this.centerY = this.canvasHeight / 2;
-        setInterval(this.animate, 230);
+        setInterval(this.animate, 130);
         return;
     }
 
@@ -39,10 +34,10 @@ Vitals = (function () {
         this.$context[0].height = this.canvasHeight;
         this.$context[0].width = this.canvasWidth;
 
-        if (this.startAngle1 <= 0) {
+        if (this.startAngle1 <= 0.01) {
             this.startAngle1 = null;
         }
-        this.startAngle1 = this.drawCircle(230, 25, 1, this.startAngle1, 0.01, "#96CDCD", true);
+        this.startAngle1 = this.drawCircle(230, 25, 1, this.startAngle1, 0.005, "#96CDCD", true);
         this.startAngle2 = this.drawCircle(210, 25, 1, this.startAngle2, 0.25, "#ff6666", false);
     };
 
@@ -75,6 +70,7 @@ Vitals = (function () {
 })();
 
 $(document).ready(function () {
+    "use strict";
     $vitals = $("#vitals");
 
     vitals = new Vitals($vitals);
