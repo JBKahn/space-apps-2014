@@ -21,9 +21,14 @@ html, body {
   html.earth, body.earth {
     background: url("../images/earth.png"); }
 
+.vitals {
+  position: absolute;
+  bottom: 1px;
+  left: 1px; }
+
 #vitals {
-  width: 500px;
-  height: 500px;
+  width: 310px;
+  height: 280px;
   margin: auto;
   position: relative;
   display: block; }
