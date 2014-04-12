@@ -1,2 +1,7 @@
+{% extends "base.html" %}
 {% load staticfiles %}
-<p>I'm a site!!!</p>
+{% block body %}
+{{ block.super }}
+<div class="site">
+  <p>I'm a website!</p>
+</div>{% endblock %}
