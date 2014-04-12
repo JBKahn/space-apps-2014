@@ -1,5 +1,5 @@
 /*global $, requestAnimationFrame, window*/
-var $clock, Clock, browserRaf, canceled, clock, targetTime,
+var $vitals, Vitals, browserRaf, canceled, vitals, targetTime,
     __bind = function (fn, me) {
         "use strict";
         return function () {
@@ -7,25 +7,25 @@ var $clock, Clock, browserRaf, canceled, clock, targetTime,
         };
     };
 
-Clock = (function () {
+Vitals = (function () {
     "use strict";
-    Clock.prototype.ctx = null;
+    Vitals.prototype.ctx = null;
 
-    Clock.prototype.raf = null;
+    Vitals.prototype.raf = null;
 
-    Clock.prototype.canvasHeight = 0;
+    Vitals.prototype.canvasHeight = 0;
 
-    Clock.prototype.canvasWidth = 0;
+    Vitals.prototype.canvasWidth = 0;
 
-    Clock.prototype.centerX = 0;
+    Vitals.prototype.centerX = 0;
 
-    Clock.prototype.centerY = 0;
+    Vitals.prototype.centerY = 0;
 
-    Clock.prototype.milliDirection = false;
+    Vitals.prototype.milliDirection = false;
 
-    Clock.prototype.date = null;
+    Vitals.prototype.date = null;
 
-    function Clock($context) {
+    function Vitals($context) {
         this.$context = $context;
         this.animate = __bind(this.animate, this);
         this.ctx = $context.get(0).getContext("2d");
@@ -37,7 +37,7 @@ Clock = (function () {
         return;
     }
 
-    Clock.prototype.animate = function () {
+    Vitals.prototype.animate = function () {
         var radians, shouldChange, time;
         this.$context[0].height = this.canvasHeight;
         this.$context[0].width = this.canvasWidth;
@@ -60,13 +60,13 @@ Clock = (function () {
         return this.raf;
     };
 
-    Clock.prototype.drawCircle = function(radius, width, endAngle, direction, startAngle, variance, color, shouldChange, strictlyDecrease) {
+    Vitals.prototype.drawCircle = function(radius, width, endAngle, direction, startAngle, variance, color, shouldChange, strictlyDecrease) {
         var x, y;
         direction = 1;
         endAngle = 3;
         x = 0;
         y = 0;
-        if (startAngle === null) {
+        if (startAngle !== "undefined" && startAngle !== null) {
             startAngle = 5 + Math.random() * variance;
         }
         if (shouldChange) {
@@ -90,7 +90,7 @@ Clock = (function () {
         return startAngle;
     };
 
-    Clock.prototype.getTimeObj = function () {
+    Vitals.prototype.getTimeObj = function () {
         var date, time;
         date = new Date();
         time = {
@@ -102,7 +102,7 @@ Clock = (function () {
         return time;
     };
 
-    Clock.prototype.getRadians = function (time) {
+    Vitals.prototype.getRadians = function (time) {
         var hours, hoursDegrees, hoursRadians, milliDegrees, milliRadians, minutesDegrees, minutesRadians;
         milliDegrees = this.map(time.milliseconds, 0, 1000, 0, 360);
         milliRadians = (milliDegrees * Math.PI) / 180;
@@ -125,7 +125,7 @@ Clock = (function () {
         return this.angles;
     };
 
-    Clock.prototype.printTime = function (time) {
+    Vitals.prototype.printTime = function (time) {
         var hours, minutes, seconds, textWidth, timeStr;
         hours = time.hours < 10 ? "0" + time.hours : time.hours;
         minutes = time.minutes < 10 ? "0" + time.minutes : time.minutes;
@@ -137,18 +137,18 @@ Clock = (function () {
         return this.ctx.fillText(timeStr, this.centerX - textWidth.width / 2, this.centerY + 7);
     };
 
-    Clock.prototype.map = function (value, low1, high1, low2, high2) {
+    Vitals.prototype.map = function (value, low1, high1, low2, high2) {
         return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
     };
 
-    return Clock;
+    return Vitals;
 
 })();
 
 $(document).ready(function () {
-    $clock = $("#clock");
+    $vitals = $("#vitals");
 
-    clock = new Clock($clock);
+    vitals = new Vitals($vitals);
 
     (function () {
         "use strict";
