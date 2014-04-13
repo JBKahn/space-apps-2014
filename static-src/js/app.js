@@ -47,6 +47,10 @@ Vitals = (function () {
         return midValue;
     };
 
+    Vitals.prototype.padDigits = function (number, digits) {
+        return Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number;
+    };
+
     Vitals.prototype.drawCircle = function (radius, width, direction, startAngle, endAngle, variance, color, strictlyDecrease, invert, image_path, image_height_offset) {
         var x, y, imageObj, time, minutes, hour;
         x = 0;
@@ -73,8 +77,8 @@ Vitals = (function () {
         }
 
         time = new Date();
-        minutes = time.getMinutes();
-        hour = time.getHours();
+        minutes = this.padDigits(time.getMinutes(), 2);
+        hour = this.padDigits(time.getHours(), 2);
         var size = $("#vitals").height() * 0.12;
         this.context.font = "bold " + String(size) + "px Georgia white";
         this.context.fillStyle = "#FFF";

@@ -8,6 +8,7 @@ module.exports = function(grunt) {
                     'bower_components/bootstrap/dist/js/bootstrap.min.js',
                     'bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js',
                     'bower_components/jquery-ui/ui/effect-slide.js',
+                    'FitText.js/jquery.fittext.js',
                     'static-src/js/app.js'
                 ],
                 dest: 'static/js/requirements.dist.js'
