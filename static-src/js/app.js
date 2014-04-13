@@ -41,7 +41,6 @@ Vitals = (function () {
         this.startAngle2 = this.drawVital(190, 25, 1, this.startAngle2, 0.25, "#ffea00", false, '/static/images/energy_360.png', 55);
     };
 
-
     Vitals.prototype.drawVital = function (radius, width, direction, midValue, variance, color, strictlyDecrease, image_path, image_height_offset) {
         midValue = this.drawCircle(radius, width, direction, midValue, 0, variance, color, strictlyDecrease, false, image_path, image_height_offset);
         this.drawCircle(radius, width, direction, 1.570796326797, midValue, variance, color, strictlyDecrease, true, null, null);
@@ -49,7 +48,7 @@ Vitals = (function () {
     };
 
     Vitals.prototype.drawCircle = function (radius, width, direction, startAngle, endAngle, variance, color, strictlyDecrease, invert, image_path, image_height_offset) {
-        var x, y, imageObj;
+        var x, y, imageObj, time, minutes, hour;
         x = 0;
         y = 0;
         if (!invert) {
@@ -61,16 +60,29 @@ Vitals = (function () {
         }
 
         this.context.save();
-        if (invert) {
-            this.context.globalAlpha = 0.8;
-        } else {
-            this.context.globalAlpha = 0.3;
-        }
         if (image_path) {
             imageObj = new Image();
             imageObj.src = image_path;
             this.context.drawImage(imageObj, this.centerX - 50, image_height_offset);
         }
+
+        if (invert) {
+            this.context.globalAlpha = 0.8;
+        } else {
+            this.context.globalAlpha = 0.3;
+        }
+
+        time = new Date();
+        minutes = time.getMinutes();
+        hour = time.getHours();
+
+        this.context.font = "bold 40px Georgia white";
+        this.context.fillStyle = "#FFF";
+        this.context.fillText(String(hour) + ":" + String(minutes), 60, 230);
+
+        imageObj = new Image();
+        imageObj.src = "/static/images/clock_360.png";
+        this.context.drawImage(imageObj, this.centerX - 50, 200);
 
         this.context.beginPath();
         this.context.shadowColor   = color;
