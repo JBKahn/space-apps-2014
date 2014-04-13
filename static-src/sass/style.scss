@@ -52,7 +52,7 @@ html, body {
 }
 
 .status-bar {
-    height: 8%;
+    height: 6%;
 	padding: 13px;
 	background: rgb(0, 192, 255);
 	background: rgba(0, 192, 255, 0.3);
@@ -108,6 +108,11 @@ html, body {
 
 .mini-map {
     z-index: 2;
+    background: url("../images/radar.gif");
+    background-size: 100%;
+    border-radius: 50%;
+    opacity: 0.7;
+    overflow: hidden;
 }
 
 .doge-far-away-text {

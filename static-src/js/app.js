@@ -122,14 +122,14 @@ $(document).ready(function () {
       $( ".alert-info" ).toggle( "slide" );
     });
 
-    document.getElementById('infoBoxTopRight').height = window.innerHeight * 0.25;
-    document.getElementById('infoBoxTopRight').width = window.innerHeight * 0.25;
-    var topRightInfoSideSize = window.innerHeight * 0.25;
+    document.getElementById('infoBoxTopRight').height = window.innerHeight * 0.35;
+    document.getElementById('infoBoxTopRight').width = window.innerHeight * 0.35;
+    var topRightInfoSideSize = window.innerHeight * 0.35;
 
     document.getElementById('infoBoxBottomRight').height = window.innerHeight * 0.25;
-    document.getElementById('infoBoxBottomRight').width = window.innerHeight * 0.40;
+    document.getElementById('infoBoxBottomRight').width = window.innerHeight * 0.50;
     var bottomRightInfoHeightSize = window.innerHeight * 0.25;
-    var bottomRightInfoWidthSize = window.innerHeight * 0.40;
+    var bottomRightInfoWidthSize = window.innerHeight * 0.50;
 
     $('.zoomed-in-object img').width(bottomRightInfoWidthSize);
     $('.zoomed-in-object img').css('position', 'absolute');
@@ -138,8 +138,12 @@ $(document).ready(function () {
     $('.doge-far-away-text').css('bottom', window.innerHeight * 0.06);
     $('.doge-far-away-text').css('left', window.innerHeight * 0.1);
     $('.doge-far-away-text').css('font-size', window.innerHeight * 0.02);
-    $('.mini-map').css("margin-top", -topRightInfoSideSize);
-    $('.mini-map').css("height", topRightInfoSideSize * 0.75);
+    $('.mini-map').css("top", topRightInfoSideSize * 0.35 / 4);
+    $('.mini-map').css("right", topRightInfoSideSize * 0.35 / 4);
+
+    $('.mini-map').css("position", "absolute");
+    $('.mini-map').css("height", topRightInfoSideSize * 0.65);
+    $('.mini-map').css("width", topRightInfoSideSize * 0.65);
 
     var topRightPaths = [[30, 0], [topRightInfoSideSize, 0], [topRightInfoSideSize, topRightInfoSideSize * 0.9], [topRightInfoSideSize * 0.4, topRightInfoSideSize * 0.9], [30, topRightInfoSideSize * 0.6]],
         bottomRightPaths = [[30, 30], [bottomRightInfoWidthSize, 30], [bottomRightInfoWidthSize, bottomRightInfoHeightSize * 0.9], [bottomRightInfoWidthSize * 0.2, bottomRightInfoHeightSize * 0.9], [30, bottomRightInfoHeightSize * 0.8]];

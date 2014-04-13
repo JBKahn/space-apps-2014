@@ -59,7 +59,7 @@ html, body {
   display: block; }
 
 .status-bar {
-  height: 8%;
+  height: 6%;
   padding: 13px;
   background: #00c0ff;
   background: rgba(0, 192, 255, 0.3);
@@ -107,7 +107,12 @@ html, body {
   margin-top: 10px; }
 
 .mini-map {
-  z-index: 2; }
+  z-index: 2;
+  background: url("../images/radar.gif");
+  background-size: 100%;
+  border-radius: 50%;
+  opacity: 0.7;
+  overflow: hidden; }
 
 .doge-far-away-text {
   position: absolute; }
