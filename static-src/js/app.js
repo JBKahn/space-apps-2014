@@ -127,6 +127,16 @@ $(document).ready(function () {
     var bottomRightInfoHeightSize = window.innerHeight * 0.15;
     var bottomRightInfoWidthSize = window.innerHeight * 0.40;
 
+    $('.zoomed-in-object img').width(bottomRightInfoWidthSize);
+    $('.doge-far-away-text').css('bottom', window.innerHeight * 0.04);
+    $('.doge-far-away-text').css('left', window.innerHeight * 0.05);
+    $('.doge-far-away-text').css('font-size', window.innerHeight * 0.02);
+    $('.mini-map').css("margin-top", -topRightInfoSideSize);
+    $('.mini-map').css("height", topRightInfoSideSize * 0.75);
+
+
+
+
 
     var topRightPaths = [[30, 0], [topRightInfoSideSize, 0], [topRightInfoSideSize, topRightInfoSideSize * 0.9], [topRightInfoSideSize * 0.4, topRightInfoSideSize * 0.9], [30, topRightInfoSideSize * 0.6]],
         bottomRightPaths = [[30, 30], [bottomRightInfoWidthSize, 30], [bottomRightInfoWidthSize, bottomRightInfoHeightSize * 0.9], [bottomRightInfoWidthSize * 0.2, bottomRightInfoHeightSize * 0.9], [30, bottomRightInfoHeightSize * 0.8]];

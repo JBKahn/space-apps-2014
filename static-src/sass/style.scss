@@ -52,13 +52,14 @@ html, body {
 }
 
 .status-bar {
+  height: 5%;
 	padding: 13px;
 	background: rgb(0, 192, 255);
 	background: rgba(0, 192, 255, 0.3);
-	margin-right: 500px;
+	width: 80%;
 	p {
 		color: white;
-		font-size: 24px;
+		font-size: 100%;
 		margin: auto;
 		padding-left: 20px;
         vertical-align: middle;
@@ -96,25 +97,19 @@ html, body {
    margin: 70px 0 0 0;
 }
 
+.zoomed-in-object {
+  .margin-bottom: 10px;
+}
+
 .alert-info {
     display: none;
     margin-top: 10px;
 }
 
-.doge {
+.mini-map {
     z-index: 2;
-    margin-top: -420px;
-    // margin-left: 50px;
 }
- .doge-far-away {
-    height: 200px;
-    width: auto;
-    margin-left: 75px;
- }
 
 .doge-far-away-text {
     position: absolute;
-    top: 330px;
-    left: 150px;
-    font-size: 30px;
 }

@@ -59,13 +59,14 @@ html, body {
   display: block; }
 
 .status-bar {
+  height: 5%;
   padding: 13px;
   background: #00c0ff;
   background: rgba(0, 192, 255, 0.3);
-  margin-right: 500px; }
+  width: 80%; }
   .status-bar p {
     color: white;
-    font-size: 24px;
+    font-size: 100%;
     margin: auto;
     padding-left: 20px;
     vertical-align: middle;
@@ -98,21 +99,15 @@ html, body {
   border-right: 30px solid white opacity 1;
   margin: 70px 0 0 0; }
 
+.zoomed-in-object {
+  .margin-bottom: 10px; }
+
 .alert-info {
   display: none;
   margin-top: 10px; }
 
-.doge {
-  z-index: 2;
-  margin-top: -420px; }
-
-.doge-far-away {
-  height: 200px;
-  width: auto;
-  margin-left: 75px; }
+.mini-map {
+  z-index: 2; }
 
 .doge-far-away-text {
-  position: absolute;
-  top: 330px;
-  left: 150px;
-  font-size: 30px; }
+  position: absolute; }
