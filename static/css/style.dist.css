@@ -26,9 +26,33 @@ html, body {
   bottom: 1px;
   left: 1px; }
 
+.infoBoxTopRightContainer {
+  position: absolute;
+  top: 1px;
+  right: 1px; }
+
+.infoBoxBottomRightContainer {
+  position: absolute;
+  bottom: 1px;
+  right: 1px; }
+
 #vitals {
   width: 310px;
   height: 280px;
+  margin: auto;
+  position: relative;
+  display: block; }
+
+#infoBoxBottomRight {
+  width: 450px;
+  height: 330px;
+  margin: auto;
+  position: relative;
+  display: block; }
+
+#infoBoxTopRight {
+  width: 330px;
+  height: 330px;
   margin: auto;
   position: relative;
   display: block; }

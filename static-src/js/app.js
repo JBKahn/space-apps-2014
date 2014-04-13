@@ -1,5 +1,5 @@
 /*global $, requestAnimationFrame, window, document, Image*/
-var $vitals, Vitals, vitals,
+var $vitals, Vitals, vitals, $infoBox, InfoBox, infoBox,
     __bind = function (fn, me) {
         "use strict";
         return function () {
@@ -110,4 +110,31 @@ $(document).ready(function () {
     $vitals = $("#vitals");
 
     vitals = new Vitals($vitals);
+
+    var topRightPaths = [[30, 0], [350, 0], [350, 130], [100, 130], [30, 80]],
+        bottomRightPaths = [[30, 0], [350, 0], [350, 150], [100, 150], [30, 100]];
+
+    var drawSidePoly = function (paths, boxId) {
+        var c2 = document.getElementById(boxId).getContext('2d');
+        c2.globalAlpha = 0.6;
+        c2.shadowColor   = "#00c0ff";
+        c2.shadowOffsetX = 0;
+        c2.shadowOffsetY = -6;
+        c2.shadowBlur    = 45;
+        c2.fillStyle = '#00c0ff';
+        c2.beginPath();
+        c2.moveTo(paths[0][0], paths[0][1]);
+        var path_length = paths.length;
+        var i, path;
+        for (i = 1; i < path_length; i = i + 1) {
+            path = paths[i];
+            c2.lineTo(path[0], path[1]);
+
+        }
+        c2.fill();
+        c2.closePath();
+    };
+    drawSidePoly(topRightPaths, 'infoBoxTopRight');
+    drawSidePoly(bottomRightPaths, 'infoBoxBottomRight');
+
 });
