@@ -2,16 +2,21 @@ html, body {
   width: 100%;
   height: 100%;
   &.stars {
-  	background: url("../images/distant-stars.png")
+  	background: url("../images/distant-stars.png");
   }
   &.space-walk {
-  	background: url("../images/space-walk.jpg")
+  	background: url("../images/space-walk.jpg");
+    background-size: 131%;
   }
   &.moon {
-  	background: url("../images/moon.jpg")
+  	background: url("../images/moon.jpg");
+    background-size: 125%;
+    background-position-y: 55%;
   }
   &.earth {
-  	background: url("../images/earth.png")
+  	background: url("../images/earth.png");
+    background-size: 150%;
+    background-position-y: 10%;
   }
 }
 
@@ -28,6 +33,7 @@ html, body {
 }
 
 .infoBoxBottomRightContainer {
+  opacity: 0;
   position: absolute;
   bottom: 1px;
   right: 1px;
@@ -117,4 +123,12 @@ html, body {
 
 .doge-far-away-text {
     position: absolute;
+    .text {
+        font-size: 16px;
+    }
+}
+
+.aim img {
+    position: absolute;
+    opacity: 0.5;
 }

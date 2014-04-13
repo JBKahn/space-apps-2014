@@ -22,11 +22,16 @@ html, body {
   html.stars, body.stars {
     background: url("../images/distant-stars.png"); }
   html.space-walk, body.space-walk {
-    background: url("../images/space-walk.jpg"); }
+    background: url("../images/space-walk.jpg");
+    background-size: 131%; }
   html.moon, body.moon {
-    background: url("../images/moon.jpg"); }
+    background: url("../images/moon.jpg");
+    background-size: 125%;
+    background-position-y: 55%; }
   html.earth, body.earth {
-    background: url("../images/earth.png"); }
+    background: url("../images/earth.png");
+    background-size: 150%;
+    background-position-y: 10%; }
 
 .vitals {
   position: absolute;
@@ -39,6 +44,7 @@ html, body {
   right: 1px; }
 
 .infoBoxBottomRightContainer {
+  opacity: 0;
   position: absolute;
   bottom: 1px;
   right: 1px; }
@@ -116,3 +122,9 @@ html, body {
 
 .doge-far-away-text {
   position: absolute; }
+  .doge-far-away-text .text {
+    font-size: 16px; }
+
+.aim img {
+  position: absolute;
+  opacity: 0.5; }

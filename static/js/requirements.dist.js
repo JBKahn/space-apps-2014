@@ -9280,6 +9280,11 @@ $(document).ready(function () {
 
     vitals = new Vitals($vitals);
 
+    $('.infoBoxBottomRightContainer').click(function() {
+      $('.infoBoxBottomRightContainer').css("opacity", 1);
+    });
+
+
     $(".top-bar").click(function() {
       $( ".alert-info" ).toggle( "slide" );
     });
@@ -9293,13 +9298,65 @@ $(document).ready(function () {
     var bottomRightInfoHeightSize = window.innerHeight * 0.25;
     var bottomRightInfoWidthSize = window.innerHeight * 0.50;
 
-    $('.zoomed-in-object img').width(bottomRightInfoWidthSize);
-    $('.zoomed-in-object img').css('position', 'absolute');
-    $('.zoomed-in-object img').css('bottom', String(window.innerHeight * 0.25 + 10) + 'px');
+    if ($('body.stars').length > 0) {
+        $('.zoomed-in-object img').width(bottomRightInfoWidthSize);
+        $('.zoomed-in-object img').css('position', 'absolute');
+        $('.zoomed-in-object img').css('bottom', String(window.innerHeight * 0.25 + 10) + 'px');
+        $('.aim img').css('bottom', String(window.innerHeight * 0.049) + 'px');
+        $('.aim img').css('right', String(window.innerHeight * 0.001) + 'px');
+        $('.aim img').css('width', String(bottomRightInfoWidthSize * 1.43) + 'px');
+        $('.aim img').css('height', String(bottomRightInfoWidthSize * 0.95) + 'px');
 
-    $('.doge-far-away-text').css('bottom', window.innerHeight * 0.06);
-    $('.doge-far-away-text').css('left', window.innerHeight * 0.1);
-    $('.doge-far-away-text').css('font-size', window.innerHeight * 0.02);
+        $('.doge-far-away-text').css('bottom', window.innerHeight * 0.03);
+        $('.doge-far-away-text').css('left', window.innerHeight * 0.1);
+        $('.doge-far-away-text').css('font-size', window.innerHeight * 0.02);
+    }
+
+    if ($('body.space-walk').length > 0) {
+        $('.zoomed-in-object img').width(bottomRightInfoWidthSize / 2);
+        $('.zoomed-in-object img').css('position', 'absolute');
+        $('.zoomed-in-object img').css('bottom', String(window.innerHeight * 0.25 + 10) + 'px');
+        $('.zoomed-in-object img').css('right', '1px');
+        $('.aim img').css('bottom', String(window.innerHeight * 0.049) + 'px');
+        $('.aim img').css('right', String(window.innerHeight * 0.001) + 'px');
+        $('.aim img').css('width', String(bottomRightInfoWidthSize * 1.43) + 'px');
+        $('.aim img').css('height', String(bottomRightInfoWidthSize * 0.95) + 'px');
+
+        $('.doge-far-away-text').css('bottom', window.innerHeight * 0.03);
+        $('.doge-far-away-text').css('left', window.innerHeight * 0.1);
+        $('.doge-far-away-text').css('font-size', window.innerHeight * 0.02);
+    }
+
+    if ($('body.moon').length > 0) {
+        $('.zoomed-in-object img').width(bottomRightInfoWidthSize / 2);
+        $('.zoomed-in-object img').css('position', 'absolute');
+        $('.zoomed-in-object img').css('bottom', String(window.innerHeight * 0.25 + 10) + 'px');
+        $('.zoomed-in-object img').css('right', '1px');
+        $('.aim img').css('bottom', String(window.innerHeight * 0.049) + 'px');
+        $('.aim img').css('right', String(window.innerHeight * 0.001) + 'px');
+        $('.aim img').css('width', String(bottomRightInfoWidthSize * 1.43) + 'px');
+        $('.aim img').css('height', String(bottomRightInfoWidthSize * 0.95) + 'px');
+
+        $('.doge-far-away-text').css('bottom', window.innerHeight * 0.03);
+        $('.doge-far-away-text').css('left', window.innerHeight * 0.1);
+        $('.doge-far-away-text').css('font-size', window.innerHeight * 0.02);
+    }
+
+    if ($('body.earth').length > 0) {
+        $('.zoomed-in-object img').width(bottomRightInfoWidthSize / 2);
+        $('.zoomed-in-object img').css('position', 'absolute');
+        $('.zoomed-in-object img').css('bottom', String(window.innerHeight * 0.25 + 10) + 'px');
+        $('.zoomed-in-object img').css('right', '1px');
+        $('.aim img').css('bottom', String(window.innerHeight * 0.049) + 'px');
+        $('.aim img').css('right', String(window.innerHeight * 0.001) + 'px');
+        $('.aim img').css('width', String(bottomRightInfoWidthSize * 1.43) + 'px');
+        $('.aim img').css('height', String(bottomRightInfoWidthSize * 0.95) + 'px');
+
+        $('.doge-far-away-text').css('bottom', window.innerHeight * 0.03);
+        $('.doge-far-away-text').css('left', window.innerHeight * 0.1);
+        $('.doge-far-away-text').css('font-size', window.innerHeight * 0.02);
+    }
+
     $('.mini-map').css("top", topRightInfoSideSize * 0.35 / 4);
     $('.mini-map').css("right", topRightInfoSideSize * 0.35 / 4);
 

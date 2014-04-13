@@ -8,7 +8,7 @@ html(lang="en")
 
         | {% block body %}
         block body
-            body(class="stars")
+            body(class="space-walk")
                 .vitals
                     canvas(id="vitals")
                 .infoBoxTopRightContainer
@@ -17,16 +17,25 @@ html(lang="en")
                     .mini-map
                 .infoBoxBottomRightContainer
                     .zoomed-in-object
-                        img(src!='{% static "images/glowing-eye.jpg" %}')
+                        img(src="http://www.spacefacts.de/bios/portraits/astronauts/meade_ca.jpg")
                     .aim
                         img(src!='{% static "images/3lines.png" %}')
                     canvas(id="infoBoxBottomRight", width="450px" ,height="350px")
                     .doge-far-away-text
                         p
-                            |  The Glowing Eye Nebula
+                            |  Astronaut Carl Meade
 
                         p.text
-                            |  Planetary nebulae have nothing to do with planets. They are shells of gas thrown off by Sun-like stars nearing the ends of their lives. The star's loss of its outer gaseous layers exposes the hot stellar core, whose strong ultraviolet radiation then causes the ejected gas to fluoresce as the planetary nebula.
+                            |  Located: ~150 miles above the Earth
+
+                        p.text
+                            |  Traveling Speed: ~10 Km/h (1, 0, -2)
+
+                        p.text
+                            |  Distance: 1 Km
+
+                        p.text
+                            |  Time in Space: 13 days
 
                 .status-bar.top-bar
                     p
@@ -34,5 +43,6 @@ html(lang="en")
 
                         |   30 m from ISS
                 .alert-info.status-bar
-                    p <strong>Heads up!</strong> It has been 16 hours since you last slept!
+                    p <strong>Checkout it out!</strong> The sun is rising!
+
         | {% endblock %}

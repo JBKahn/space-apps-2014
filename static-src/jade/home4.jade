@@ -8,7 +8,7 @@ html(lang="en")
 
         | {% block body %}
         block body
-            body(class="stars")
+            body(class="earth")
                 .vitals
                     canvas(id="vitals")
                 .infoBoxTopRightContainer
@@ -17,16 +17,16 @@ html(lang="en")
                     .mini-map
                 .infoBoxBottomRightContainer
                     .zoomed-in-object
-                        img(src!='{% static "images/glowing-eye.jpg" %}')
+                        img(src='http://upload.wikimedia.org/wikipedia/commons/6/6f/Earth_Eastern_Hemisphere.jpg', style="border-radius:50%")
                     .aim
                         img(src!='{% static "images/3lines.png" %}')
                     canvas(id="infoBoxBottomRight", width="450px" ,height="350px")
                     .doge-far-away-text
                         p
-                            |  The Glowing Eye Nebula
+                            |  Aurora Borealis/Northern Lights
 
                         p.text
-                            |  Planetary nebulae have nothing to do with planets. They are shells of gas thrown off by Sun-like stars nearing the ends of their lives. The star's loss of its outer gaseous layers exposes the hot stellar core, whose strong ultraviolet radiation then causes the ejected gas to fluoresce as the planetary nebula.
+                            |  You're seeing the result of collisions between gaseous particles in the Earth's atmosphere with charged particles released from the sun's atmosphere.
 
                 .status-bar.top-bar
                     p
@@ -34,5 +34,6 @@ html(lang="en")
 
                         |   30 m from ISS
                 .alert-info.status-bar
-                    p <strong>Heads up!</strong> It has been 16 hours since you last slept!
+                    p <strong>Approaching home</strong> You are about to pass over your home
+
         | {% endblock %}
