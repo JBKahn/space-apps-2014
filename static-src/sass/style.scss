@@ -20,10 +20,18 @@ html, body {
   bottom: 1px;
   left: 1px;
 }
-#vitals {
-  width: 310px;
-  height: 280px;
-  margin: auto;
-  position: relative;
-  display: block;
+
+.status-bar {
+	padding: 10px;
+	background: rgb(33, 101, 153);
+	background: rgba(33, 101, 153, 0.7);
+	margin-top: 7px;
+	margin-right: 500px;
+	p {
+		color: white;
+		font-size: 18px;
+		padding-left: 20px;
+	}
 }
+
+
