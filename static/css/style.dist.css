@@ -59,17 +59,17 @@ html, body {
   display: block; }
 
 .status-bar {
-  height: 5%;
+  height: 8%;
   padding: 13px;
   background: #00c0ff;
   background: rgba(0, 192, 255, 0.3);
-  width: 80%; }
+  width: 80%;
+  vertical-align: middle; }
   .status-bar p {
     color: white;
-    font-size: 100%;
+    font-size: 165%;
     margin: auto;
     padding-left: 20px;
-    vertical-align: middle;
     font-style: bold; }
   .status-bar img {
     margin-top: -5px; }

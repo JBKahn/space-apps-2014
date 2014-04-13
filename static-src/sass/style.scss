@@ -52,17 +52,17 @@ html, body {
 }
 
 .status-bar {
-  height: 5%;
+    height: 8%;
 	padding: 13px;
 	background: rgb(0, 192, 255);
 	background: rgba(0, 192, 255, 0.3);
 	width: 80%;
+    vertical-align: middle;
 	p {
 		color: white;
-		font-size: 100%;
+		font-size: 165%;
 		margin: auto;
 		padding-left: 20px;
-        vertical-align: middle;
         font-style: bold;
 	}
     img {
