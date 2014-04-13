@@ -26,6 +26,13 @@ html, body {
   bottom: 1px;
   left: 1px; }
 
+#vitals {
+  width: 310px;
+  height: 280px;
+  margin: auto;
+  position: relative;
+  display: block; }
+
 .status-bar {
   padding: 10px;
   background: #216599;
