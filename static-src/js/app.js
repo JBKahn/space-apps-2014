@@ -42,8 +42,12 @@ Vitals = (function () {
     };
 
     Vitals.prototype.drawVital = function (radius, width, direction, midValue, variance, color, strictlyDecrease, image_path, image_height_offset) {
-        midValue = this.drawCircle(radius, width, direction, midValue, 0, variance, color, strictlyDecrease, false, image_path, image_height_offset);
-        this.drawCircle(radius, width, direction, 1.570796326797, midValue, variance, color, strictlyDecrease, true, null, null);
+        if ($('body.moon').length > 0 && color == "#00ff66") {
+            midValue = this.drawCircle(radius, width, direction, 1.570796326797, 0, variance, color, strictlyDecrease, true, null, null);
+        } else {
+            midValue = this.drawCircle(radius, width, direction, midValue, 0, variance, color, strictlyDecrease, false, image_path, image_height_offset);
+            this.drawCircle(radius, width, direction, 1.570796326797, midValue, variance, color, strictlyDecrease, true, null, null);
+        }
         return midValue;
     };
 
