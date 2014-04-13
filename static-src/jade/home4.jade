@@ -9,6 +9,20 @@ html(lang="en")
         | {% block body %}
         block body
             body(class="earth")
+                .location-pin
+                    div(id="mtl")
+                        i.fa.fa-map-marker
+                        p
+                            |   Montreal, Canada
+                    div(id="mtl-info")
+                        p.text
+                            |  Weather: 13°C, Wind W at 3 km/h, 38% Humidity
+
+                        p.text
+                            |  Population: 1.621 million
+
+                        p.text
+                            |  Time: 6:06pm
                 .vitals
                     canvas(id="vitals")
                 .infoBoxTopRightContainer

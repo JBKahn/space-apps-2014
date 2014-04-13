@@ -190,7 +190,7 @@ $(document).ready(function () {
         $('.aim img').css('width', String(bottomRightInfoWidthSize * 1.43) + 'px');
         $('.aim img').css('height', String(bottomRightInfoWidthSize * 0.95) + 'px');
 
-        $('.doge-far-away-text').css('bottom', window.innerHeight * 0.03);
+        $('.doge-far-away-text').css('bottom', window.innerHeight * 0.05);
         $('.doge-far-away-text').css('left', window.innerHeight * 0.1);
         $('.doge-far-away-text').css('font-size', window.innerHeight * 0.02);
     }

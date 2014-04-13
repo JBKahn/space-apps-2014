@@ -132,3 +132,39 @@ html, body {
     position: absolute;
     opacity: 0.5;
 }
+
+.location-pin {
+    #mtl {
+        font-size: 140%;
+        p, i {
+            color: #00c0ff;
+        }
+        i {
+            font-size: 180%;
+        }
+        position: absolute;
+        top: 92%;
+        left: 35%;
+    }
+}
+
+#mtl-info {
+    height: 110px;
+    padding-top: 13px;
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    background: rgb(0, 192, 255);
+    background: rgba(0, 192, 255, 0.7);
+    width: 450px;
+    p {
+        margin-left: 50px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    -webkit-box-shadow:0px 0px 70px #00c0ff;
+    -moz-box-shadow: 0px 0px 70px #00c0ff;
+    box-shadow:0px 0px 70px #00c0ff;
+    opacity: 0.9;
+}
