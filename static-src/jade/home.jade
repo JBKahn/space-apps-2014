@@ -16,5 +16,8 @@ html(lang="en")
                 .infoBoxBottomRightContainer
                     canvas(id="infoBoxBottomRight")
                 .status-bar
-                    p 30 m from ISS
+                    p
+                        img(src!='{% static "images/location.png" %}', alt="")
+
+                        |   30 m from ISS
         | {% endblock %}

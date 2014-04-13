@@ -34,7 +34,7 @@ Vitals = (function () {
         this.$context[0].height = this.canvasHeight;
         this.$context[0].width = this.canvasWidth;
 
-        if (this.startAngle1 >= 1.51) {
+        if (this.startAngle1 >= 1.56) {
             this.startAngle1 = null;
         }
         this.startAngle1 = this.drawVital(230, 25, 1, this.startAngle1, 0.005, "#00ff66", true, '/static/images/o2_360.png', 15);
@@ -112,7 +112,7 @@ $(document).ready(function () {
     vitals = new Vitals($vitals);
 
     var topRightPaths = [[30, 0], [350, 0], [350, 130], [100, 130], [30, 80]],
-        bottomRightPaths = [[30, 0], [350, 0], [350, 150], [100, 150], [30, 100]];
+        bottomRightPaths = [[30, 30], [350, 30], [350, 150], [100, 150], [30, 100]];
 
     var drawSidePoly = function (paths, boxId) {
         var c2 = document.getElementById(boxId).getContext('2d');
