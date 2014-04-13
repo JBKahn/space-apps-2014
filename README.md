@@ -7,11 +7,7 @@ InSight is a voice and motion activated data visualization platform and companio
 Setup
 =====
 
-Install your JS dependencies with Node:
-
-    $ npm install
-
-Install your front-end libraries with Grunt/Bower:
+Install your front-end libraries with the Node Package Manager and Grunt/Bower:
 
 	$ npm install -g bower
 
