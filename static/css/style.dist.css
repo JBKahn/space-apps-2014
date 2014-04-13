@@ -34,12 +34,37 @@ html, body {
   display: block; }
 
 .status-bar {
-  padding: 10px;
-  background: #216599;
-  background: rgba(33, 101, 153, 0.7);
-  margin-top: 7px;
+  padding: 13px;
+  background: #00c0ff;
+  background: rgba(0, 192, 255, 0.3);
   margin-right: 500px; }
   .status-bar p {
     color: white;
     font-size: 18px;
+    margin: auto;
     padding-left: 20px; }
+
+.info-box {
+  float: right;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 192, 255, 0.3); }
+
+.info-box:before {
+  height: 0;
+  width: 40px;
+  content: "";
+  position: absolute;
+  border-bottom: 30px solid #00C0FF opacity 1;
+  border-left: 30px solid white opacity 1;
+  border-right: 30px solid white opacity 1; }
+
+.info-box:after {
+  height: 0;
+  width: 40px;
+  content: "";
+  position: absolute;
+  border-top: 30px solid #00C0FF opacity 1;
+  border-left: 30px solid white opacity 1;
+  border-right: 30px solid white opacity 1;
+  margin: 70px 0 0 0; }
