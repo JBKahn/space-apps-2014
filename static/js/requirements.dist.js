@@ -9142,8 +9142,8 @@ Vitals = (function () {
         this.context = $context.get(0).getContext("2d");
         this.canvasHeight = this.$context.height();
         this.canvasWidth = this.$context.width();
-        this.centerX = 60;
-        this.centerY = 265;
+        this.centerX = $("#vitals").width() * 0.1;
+        this.centerY = $("#vitals").height();
         setInterval(this.animate, 130);
         return;
     }
@@ -9155,8 +9155,8 @@ Vitals = (function () {
         if (this.startAngle1 >= 1.56) {
             this.startAngle1 = null;
         }
-        this.startAngle1 = this.drawVital(230, 25, 1, this.startAngle1, 0.005, "#00ff66", true, '/static/images/o2_360.png', 15);
-        this.startAngle2 = this.drawVital(190, 25, 1, this.startAngle2, 0.25, "#ffea00", false, '/static/images/energy_360.png', 55);
+        this.startAngle1 = this.drawVital($("#vitals").height() * 0.85, $("#vitals").height() * 0.05, 1, this.startAngle1, 0.005, "#00ff66", true, '/static/images/o2_360.png', $("#vitals").height() * 0.13);
+        this.startAngle2 = this.drawVital($("#vitals").height() * 0.75, $("#vitals").height() * 0.05, 1, this.startAngle2, 0.25, "#ffea00", false, '/static/images/energy_360.png', $("#vitals").height() * 0.23);
     };
 
     Vitals.prototype.drawVital = function (radius, width, direction, midValue, variance, color, strictlyDecrease, image_path, image_height_offset) {
@@ -9193,14 +9193,14 @@ Vitals = (function () {
         time = new Date();
         minutes = time.getMinutes();
         hour = time.getHours();
-
-        this.context.font = "bold 40px Georgia white";
+        var size = $("#vitals").height() * 0.12;
+        this.context.font = "bold " + String(size) + "px Georgia white";
         this.context.fillStyle = "#FFF";
-        this.context.fillText(String(hour) + ":" + String(minutes), 60, 230);
+        this.context.fillText(String(hour) + ":" + String(minutes), 60, $("#vitals").height() * 0.66);
 
         imageObj = new Image();
         imageObj.src = "/static/images/clock_360.png";
-        this.context.drawImage(imageObj, this.centerX - 50, 200);
+        this.context.drawImage(imageObj, this.centerX - 50, $("#vitals").height() * 0.63);
 
         this.context.beginPath();
         this.context.shadowColor   = color;
@@ -9227,14 +9227,28 @@ $(document).ready(function () {
     "use strict";
     $vitals = $("#vitals");
 
+    $vitals[0].height = window.innerHeight * 0.25;
+    $vitals[0].width = window.innerHeight * 0.25;
+
     vitals = new Vitals($vitals);
 
     $(".top-bar").click(function() {
       $( ".alert-info" ).toggle( "slide" );
     });
 
-    var topRightPaths = [[30, 0], [350, 0], [350, 280], [100, 280], [30, 200]],
-        bottomRightPaths = [[30, 30], [430, 30], [430, 340], [100, 340], [30, 260]];
+    document.getElementById('infoBoxTopRight').height = window.innerHeight * 0.25;
+    document.getElementById('infoBoxTopRight').width = window.innerHeight * 0.25;
+    var topRightInfoSideSize = window.innerHeight * 0.25;
+
+    document.getElementById('infoBoxBottomRight').height = window.innerHeight * 0.15;
+    document.getElementById('infoBoxBottomRight').width = window.innerHeight * 0.40;
+    var bottomRightInfoHeightSize = window.innerHeight * 0.15;
+    var bottomRightInfoWidthSize = window.innerHeight * 0.40;
+
+
+    var topRightPaths = [[30, 0], [topRightInfoSideSize, 0], [topRightInfoSideSize, topRightInfoSideSize * 0.9], [topRightInfoSideSize * 0.4, topRightInfoSideSize * 0.9], [30, topRightInfoSideSize * 0.6]],
+        bottomRightPaths = [[30, 30], [bottomRightInfoWidthSize, 30], [bottomRightInfoWidthSize, bottomRightInfoHeightSize * 0.9], [bottomRightInfoWidthSize * 0.2, bottomRightInfoHeightSize * 0.9], [30, bottomRightInfoHeightSize * 0.8]];
+
 
     var drawSidePoly = function (paths, boxId) {
         var c2 = document.getElementById(boxId).getContext('2d');

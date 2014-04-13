@@ -44,8 +44,6 @@ html, body {
   right: 1px; }
 
 #vitals {
-  width: 310px;
-  height: 280px;
   margin: auto;
   position: relative;
   display: block; }
