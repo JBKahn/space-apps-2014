@@ -9172,14 +9172,14 @@ Vitals = (function () {
         y = 0;
         if (!invert) {
             if ((startAngle === "undefined" || startAngle === null) || !strictlyDecrease) {
-                startAngle = 0.98 + Math.random() * variance;
+                startAngle = 0.58 - Math.random() * variance;
             } else {
-                startAngle = startAngle - Math.random() * variance;
+                startAngle = startAngle + Math.random() * variance;
             }
         }
 
         this.context.save();
-        if (!invert) {
+        if (invert) {
             this.context.globalAlpha = 0.8;
         } else {
             this.context.globalAlpha = 0.3;
