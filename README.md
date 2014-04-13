@@ -1,5 +1,6 @@
-NASA Space apps 2014: Spacet
-============================
+NASA Space apps 2014: SpaceT Challenge, Team Insight
+====================================================
+[Spaceapps Challenge Project Insight](https://2014.spaceappschallenge.org/project/insight-/)
 
 Setup
 =====
