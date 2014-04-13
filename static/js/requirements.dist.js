@@ -9152,7 +9152,7 @@ Vitals = (function () {
         this.$context[0].height = this.canvasHeight;
         this.$context[0].width = this.canvasWidth;
 
-        if (this.startAngle1 <= 0.01) {
+        if (this.startAngle1 >= 1.51) {
             this.startAngle1 = null;
         }
         this.startAngle1 = this.drawVital(230, 25, 1, this.startAngle1, 0.005, "#00ff66", true, '/static/images/o2_360.png', 15);
