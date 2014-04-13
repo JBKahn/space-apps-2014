@@ -105,4 +105,5 @@ html, body {
   margin: 70px 0 0 0; }
 
 .alert-info {
+  display: none;
   margin-top: 10px; }
