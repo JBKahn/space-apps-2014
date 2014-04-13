@@ -15,9 +15,11 @@ html(lang="en")
                     canvas(id="infoBoxTopRight")
                 .infoBoxBottomRightContainer
                     canvas(id="infoBoxBottomRight")
-                .status-bar
+                .status-bar.top-bar
                     p
                         img(src!='{% static "images/location.png" %}', alt="")
 
                         |   30 m from ISS
+                .alert-info.status-bar
+                    p <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
         | {% endblock %}

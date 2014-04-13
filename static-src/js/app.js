@@ -111,6 +111,10 @@ $(document).ready(function () {
 
     vitals = new Vitals($vitals);
 
+    $(".top-bar").click(function() {
+      $( ".alert-info" ).toggle( "slide" );
+    });
+
     var topRightPaths = [[30, 0], [350, 0], [350, 130], [100, 130], [30, 80]],
         bottomRightPaths = [[30, 30], [350, 30], [350, 150], [100, 150], [30, 100]];
 

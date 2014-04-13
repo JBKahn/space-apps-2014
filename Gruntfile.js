@@ -7,6 +7,7 @@ module.exports = function(grunt) {
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap/dist/js/bootstrap.min.js',
                     'bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js',
+                    'bower_components/jquery-ui/ui/effect-slide.js',
                     'static-src/js/app.js'
                 ],
                 dest: 'static/js/requirements.dist.js'
@@ -15,6 +16,7 @@ module.exports = function(grunt) {
                 src: [
                     'bower_components/bootstrap-datepicker/css/datepicker.css',
                     'bower_components/bootstrap/dist/css/bootstrap.min.css',
+                    'bower_components/bootstrap/dist/css/bootstrap-theme.min.css',
                     'bower_components/font-awesome/css/font-awesome.min.css',
                     'static-src-build/css/style.css'
                 ],
