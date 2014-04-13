@@ -9233,8 +9233,8 @@ $(document).ready(function () {
       $( ".alert-info" ).toggle( "slide" );
     });
 
-    var topRightPaths = [[30, 0], [350, 0], [350, 130], [100, 130], [30, 80]],
-        bottomRightPaths = [[30, 30], [350, 30], [350, 150], [100, 150], [30, 100]];
+    var topRightPaths = [[30, 0], [350, 0], [350, 280], [100, 280], [30, 200]],
+        bottomRightPaths = [[30, 30], [430, 30], [430, 340], [100, 340], [30, 260]];
 
     var drawSidePoly = function (paths, boxId) {
         var c2 = document.getElementById(boxId).getContext('2d');
