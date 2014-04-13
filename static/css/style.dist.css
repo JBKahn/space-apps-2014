@@ -79,6 +79,9 @@ html, body {
     font-style: bold; }
   .status-bar img {
     margin-top: -5px; }
+  .status-bar.emergency {
+    background: #e92f2f;
+    background: rgba(233, 47, 47, 0.3); }
 
 .info-box {
   float: right;

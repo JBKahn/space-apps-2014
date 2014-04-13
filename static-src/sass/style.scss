@@ -74,6 +74,10 @@ html, body {
     img {
         margin-top: -5px;
     }
+    &.emergency {
+        background: rgb(233, 47, 47);
+        background: rgba(233, 47, 47, 0.3);
+    }
 }
 
 .info-box {
