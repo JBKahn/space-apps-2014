@@ -2,6 +2,8 @@ NASA Space apps 2014: SpaceT Challenge, Team Insight
 ====================================================
 [Spaceapps Challenge Project Insight](https://2014.spaceappschallenge.org/project/insight-/)
 
+InSight is a voice and motion activated data visualization platform and companion application for heads up display. Aggregating information from biometric sensors, location, and external data such as oxygen and radiation, InSight enhances the experience of being in outer space by providing contextual information about your surroundings via augmented reality. 
+
 Setup
 =====
 
