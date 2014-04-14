@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spacet</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.dist.css">
+    <script src="javascripts/requirements.dist.js" type="text/javascript"></script>
+    <body class="space-walk">
+      <div class="vitals">
+        <canvas id="vitals"></canvas>
+      </div>
+      <div class="infoBoxTopRightContainer">
+        <canvas id="infoBoxTopRight" width="300px" height="300px"></canvas>
+      </div>
+      <div class="mini-map-container">
+        <div class="mini-map"></div>
+      </div>
+      <div class="infoBoxBottomRightContainer">
+        <div class="zoomed-in-object"><img src="http://www.spacefacts.de/bios/portraits/astronauts/meade_ca.jpg"></div>
+        <div class="aim"><img src="images/3lines.png"></div>
+        <canvas id="infoBoxBottomRight" width="450px" height="350px"></canvas>
+        <div class="doge-far-away-text">
+          <p> Astronaut Carl Meade</p>
+          <p class="text"> Located: ~150 miles above the Earth</p>
+          <p class="text"> Traveling Speed: ~10 Km/h (1, 0, -2)</p>
+          <p class="text"> Distance: 1 Km</p>
+          <p class="text"> Time in Space: 13 days</p>
+        </div>
+      </div>
+      <div class="status-bar top-bar">
+        <p><img src="images/location.png" alt="">  30 m from ISS</p>
+      </div>
+      <div class="alert-info status-bar emergency">
+        <p><strong>Emergency!</strong> Please return to the ISS</p>
+      </div>
+      <img src="images/clock_360.png" alt="" class="clock" style="display: none;">
+      <img src="images/energy_360.png" alt="" class="energy" style="display: none;">
+      <img src="images/o2_360.png" alt="" class="oxyegn" style="display: none;">
+    </body>
+  </head>
+</html>
